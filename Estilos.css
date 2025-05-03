@@ -1,160 +1,114 @@
-/* Estilo global */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
     box-sizing: border-box;
-}
-
-/* Título del formulario */
-h1 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2em;
-}
-
-/* Estilo para las preguntas */
-p {
-    font-size: 1.2em;
-    color: #333;
-    margin: 20px 0;
-}
-
-/* Estilo para el formulario */
-form {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 800px;
-    margin: 40px auto;
-}
-
-/* Estilo para las opciones */
-select {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-    font-size: 1em;
-}
-
-select:focus {
-    border-color: #4CAF50;
-    background-color: #fff;
-    outline: none;
-}
-
-/* Botón de enviar */
-button {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-/* Estilo para el resultado */
-#resultado {
-    padding: 20px;
-    border: 2px solid #4CAF50;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    margin-top: 20px;
-    text-align: center;
-    display: none;
-}
-
-#resultado h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-#resultado ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#resultado ul li {
-    font-size: 1.2em;
-    margin: 5px 0;
-}
-
-/* Estilo para el gráfico (opcional) */
-canvas {
-    margin-top: 20px;
-    max-width: 100%;
-    height: auto !important;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#lista-resultados {
-    list-style-type: none;
-    padding: 0;
-}
-
-#lista-resultados li {
-    font-size: 18px;
-    margin: 5px 0;
-}
-
-html, body {
-    height: 100%;
     overflow-x: hidden;
 }
 
-/* 📱 Estilos mejorados para pantallas muy pequeñas */
-@media screen and (max-width: 400px) {
-    form {
-        padding: 10px;
+form {
+    background-color: #ffffff;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+select {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    background-color: #fafafa;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#resultado {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center; /* 👈 centra el contenido */
+}
+
+#resultado p {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+}
+
+#lista-resultados {
+    list-style: none; /* 👈 elimina las viñetas */
+    padding: 0;
+    margin: 1rem 0;
+}
+
+#lista-resultados li {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+
+
+canvas {
+    display: block;
+    margin: 2rem auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive: pantallas pequeñas */
+@media (max-width: 600px) {
+    form, #resultado {
+        margin: 1rem;
+        padding: 1rem;
     }
 
-    p {
-        font-size: 0.95em;
-    }
-
-    label {
-        font-size: 0.85em;
-        display: block;
-        margin-top: 8px;
-        word-break: break-word;
-    }
-
-    select {
-        font-size: 0.9em;
-        padding: 8px;
+    p, label, select, button {
+        font-size: 0.95rem;
     }
 
     button {
-        font-size: 1em;
-        padding: 10px;
-    }
-
-    #resultado h2 {
-        font-size: 1.3em;
-    }
-
-    #resultado ul li {
-        font-size: 1em;
-    }
-
-    canvas {
-        width: 100% !important;
-        height: auto !important;
+        width: 100%;
     }
 }

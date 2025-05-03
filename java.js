@@ -57,9 +57,9 @@ document.getElementById("cuestionario").addEventListener("submit", function(even
                 datasets: [{
                     label: "Resultado del cuestionario",
                     data: Object.values(conteo),
-                    backgroundColor: "rgba(54, 162, 235, 0.2)",
-                    borderColor: "rgba(54, 162, 235, 1)",
-                    pointBackgroundColor: "rgba(54, 162, 235, 1)"
+                    backgroundColor: "rgba(0, 0, 0, 0.2)",
+                    borderColor: "rgb(0, 0, 0)",
+                    pointBackgroundColor: "rgb(22, 222, 102)"
                 }]
             },
             options: {

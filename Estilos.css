@@ -8,6 +8,8 @@ body {
     overflow-x: hidden;
 }
 
+
+
 form {
     background-color: #ffffff;
     max-width: 800px;
@@ -16,6 +18,9 @@ form {
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
+
+
 
 p {
     font-size: 1.1rem;
@@ -40,6 +45,9 @@ select {
     background-color: #fafafa;
     transition: border-color 0.3s;
 }
+
+
+
 
 select:focus {
     border-color: #007BFF;
@@ -68,8 +76,11 @@ button:hover {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: center; /* 👈 centra el contenido */
+    text-align: center; 
 }
+
+
+
 
 #resultado p {
     font-size: 1.1rem;
@@ -77,7 +88,7 @@ button:hover {
 }
 
 #lista-resultados {
-    list-style: none; /* 👈 elimina las viñetas */
+    list-style: none; 
     padding: 0;
     margin: 1rem 0;
 }

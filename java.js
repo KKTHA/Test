@@ -16,10 +16,10 @@ document.getElementById("cuestionario").addEventListener("submit", function(even
     const carreras = {
           A: "A) Pedagogía",
         B: "B) Turismo",
-        C: "C) Comunicación",
-        D: "D) Diseño Gráfico",
+         C: "C) Comunicación",
+         D: "D) Diseño Gráfico",
         E: "E) Mercadotecnia",
-        F: "F) Gastronomía",
+     F: "F) Gastronomía",
         G: "G) Nutrición",
         H: "H) Ingeniería",
         I: "I) Derecho"
